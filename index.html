@@ -109,7 +109,7 @@
 
 		<div class="onglet active" onclick="openPage(this, 'accueil')">Accueil</div>
 		<div class="onglet" onclick="openPage(this, 'produits')">Produits</div>
-		<div class="onglet" onclick="openPage(this, 'propos')">A propos</div>
+		<div class="onglet" onclick="openPage(this, 'contact')">Contact</div>
 		
 	</div>
 
@@ -171,8 +171,8 @@
 			</table>
 		</div>
 
-		<div id="propos">
-			<h1>A propos de nous...</h1>
+		<div id="contact">
+			<h1>Les membres de l'équipe</h1>
 		</div>
 
 
@@ -181,7 +181,7 @@
 
 		function openPage(o, page){
 			$('#header .onglet').removeClass('active')
-			pages = ['accueil', 'produits', 'propos']
+			pages = ['accueil', 'produits', 'contact']
 			for (var i = 0; i < pages.length; i++) {
 				var object = '#' + pages[i];
 				if(page == pages[i]){
