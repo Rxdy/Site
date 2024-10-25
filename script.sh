@@ -1,5 +1,4 @@
 #!/bin/bash
-apt remove -y apache2
 apt update -y
 apt install -y apache2
 systemctl enable apache2
