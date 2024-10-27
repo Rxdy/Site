@@ -19,7 +19,6 @@ elif [$distrib == 'ID=debian'];
     apt update -y
     apt install -y apache2
     systemctl enable apache2
-    apt install -y git
 fi
   cd /var/www/html
   rm -f index.html
