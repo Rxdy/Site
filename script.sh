@@ -6,8 +6,8 @@ then
   echo "Erreur ! Attention, vous devez être en root pour lancer le script"; 
   echo "Error ! Please, you must be root to run the script";
   echo $distrib;
-else
-  if [$distrib == 'ID="rocky"'];
+fi
+if [$distrib == 'ID="rocky"'];
   then
     dnf update -y
     dnf install -y httpd
@@ -24,4 +24,4 @@ fi
   rm -f index.html
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
   echo "Installation terminée";
-fi
+
