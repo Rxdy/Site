@@ -11,4 +11,6 @@ firewall-cmd --reload
 cd /var/www/html
 rm index.html
 wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
+
+echo "Installation terminée";
 fi
