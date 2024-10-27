@@ -21,7 +21,7 @@ else
     apt install -y git
   fi
   cd /var/www/html
-  rm index.html
+  rm -f index.html
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
   echo "Installation terminée";
 fi
