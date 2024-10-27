@@ -14,7 +14,7 @@ else
     systemctl enable httpd && systemctl start httpd
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
-  elif [$distrib == 'ID=debian']
+  elif [$distrib == 'ID=debian'];
     apt update -y
     apt install -y apache2
     systemctl enable apache2 && systemctl start apache2
