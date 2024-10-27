@@ -15,12 +15,12 @@ else
     systemctl enable httpd && systemctl start httpd
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
-  elif [$distrib == 'ID=debian'];
+elif [$distrib == 'ID=debian'];
     apt update -y
     apt install -y apache2
     systemctl enable apache2 && systemctl start apache2
     apt install -y git;
-  fi
+fi
   cd /var/www/html
   rm -f index.html
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
