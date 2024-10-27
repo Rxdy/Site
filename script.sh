@@ -10,13 +10,15 @@ else
   then
     dnf update -y
     dnf install -y httpd
+    dnf install -y git
     systemctl enable httpd && systemctl start httpd
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
   else
     apt update -y
     apt install -y apache2
-    systemctl enable apache2
+    systemctl enable apache2 && systemctl start apache2
+    apt install -y git
   fi
   cd /var/www/html
   rm index.html
