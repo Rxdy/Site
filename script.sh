@@ -3,9 +3,8 @@ distrib=$(cat /etc/*release* | grep "^ID=");
 if [ "$USER" != "root" ]; then 
   echo "Erreur ! Attention, vous devez être en root pour lancer le script" 
   echo "Error ! Please, you must be root to run the script"
-  echo "Distribution détectée : $distrib"
 else
-  if [ "$distrib" == 'ID="rocky"']; then
+  if [ "$distrib" == 'ID="rocky"' ]; then
     echo "je suis ici"
     dnf update -y
     dnf install -y httpd
@@ -14,13 +13,12 @@ else
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
   elif [ "$distrib" == 'ID=debian' ]; then
-    echo "je suis ici"
     apt update -y
     apt install -y apache2
     systemctl enable apache2 && systemctl start apache2
     apt install -y git
   else
-      echo "Cette distribution n'est pas géré"
+      echo "Cette distribution n'est pas supportée. Une distribution Rocky Linux ou Debian est demandée."
       exit
   fi
   cd /var/www/html
