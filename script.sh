@@ -1,7 +1,8 @@
 #!/bin/bash
 if [ $USER != 'root' ]; 
 then 
-  echo "Vous devez être en root pour lancer le script"; 
+  echo "Erreur ! Attention, vous devez être en root pour lancer le script"; 
+  echo "Error ! Please, you must be root to run the script"; 
 else
   apt update -y
   apt install -y apache2
