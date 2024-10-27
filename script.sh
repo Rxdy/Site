@@ -6,8 +6,8 @@ then
   echo "Erreur ! Attention, vous devez être en root pour lancer le script"; 
   echo "Error ! Please, you must be root to run the script";
   echo $distrib;
-fi
-if [$distrib == 'ID="rocky"'];
+else
+  if [ $distrib == 'ID="rocky"' ];
   then
     dnf update -y
     dnf install -y httpd
@@ -15,13 +15,13 @@ if [$distrib == 'ID="rocky"'];
     systemctl enable httpd && systemctl start httpd
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
-elif [$distrib == 'ID=debian'];
+  elif [ $distrib == 'ID=debian' ];
     apt update -y
     apt install -y apache2
     systemctl enable apache2
-fi
+  fi
   cd /var/www/html
   rm -f index.html
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
   echo "Installation terminée";
-
+fi
