@@ -6,6 +6,7 @@ if [ "$USER" != "root" ]; then
   echo "Distribution détectée : $distrib"
 else
   if [ "$distrib" == "rocky" ]; then
+  echo "je suis ici"
     dnf update -y
     dnf install -y httpd
     dnf install -y git
