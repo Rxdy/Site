@@ -28,6 +28,6 @@ else
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
   echo "Installation terminée"
   echo "---------------------"
-  echo "http://"+$ipadress
+  echo "http://"$ipadress
   echo "---------------------"
 fi
