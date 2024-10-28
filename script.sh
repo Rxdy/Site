@@ -26,7 +26,8 @@ else
   cd /var/www/html
   rm -f index.html
   wget https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/index.html
-  echo "Installation terminée"
+  echo "Installation terminée, pour accéder au site utilisé le lien ci dessous sur votre navigateur."
+  echo " "
   echo "---------------------"
   echo "http://"$ipadress
   echo "---------------------"
