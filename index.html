@@ -33,6 +33,15 @@
 			width:50%;
 		}
 
+      .onglet {
+        border-radius: 10px 10px 0px 0px;
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+        padding: 1%;
+        cursor: pointer;
+        margin-top: 1%;
+      }
 		.onglet {
 	   		border-radius: 10px 10px 0px 0px;
 	    	display: inline-block;
@@ -43,11 +52,20 @@
 	    	line-height: 60px;
 		}
 
-		.onglet:hover{
-			color:black;
-			background-color:#dadada;
-		}
+      .onglet:hover {
+        color: black;
+        background-color: #dadada;
+      }
 
+      .onglet.active {
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+        padding: 1%;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+      }
 		.onglet.active{
 			display:inline-block;
 			text-align: center;
@@ -57,9 +75,8 @@
 			height: 60px;
 		}
 
-		.onglet:hover.active{
-			
-		}
+      .onglet:hover.active {
+      }
 
 		.content{
 			background-color:white;
@@ -130,86 +147,112 @@
 		</div>
 	</div>
 
-	<div class="content">
-		
-		<div id="accueil">
-			<h1>Accueil</h1>
-		</div>
+    <div class="content">
+      <div id="accueil">
+        <h1>Accueil</h1>
+      </div>
 
-		<div id="produits">
-			<h1>Les produits</h1>
+      <div id="produits">
+        <h1>Les produits</h1>
 
-			<table class="table table-hover">
-					
-				<thead>
-					<th class="t-col-10">Code</th>
-					<th class="t-col-20">Désignation</th>
-					<th class="t-col-40">Description</th>
-					<th class="t-col-10">Prix</th>
-					<th class="t-col-10">Vendu</th>
-					<th class="t-col-10">Actions</th>
-				</thead>
-				<tbody>
-					<tr>
-						<td>#P5789</td>
-						<td>Carte graphique</td>
-						<td>Une carte graphique sont rôle est de produire une image affichable sur un écran.</td>
-						<td>200€</td>
-						<td>12</td>
-						<td><button>Acheter</button></td>
-					</tr>
-					<tr>
-						<td>#P5790</td>
-						<td>Processeur</td>
-						<td>Le coeur de votre ordinateur !</td>
-						<td>150€</td>
-						<td>29</td>
-						<td><button>Acheter</button></td>
-					</tr>
-					<tr>
-						<td>#P5791</td>
-						<td>Barrette de ram</td>
-						<td>La mémoire vive, parfois abrégée avec l'acronyme anglais RAM...</td>
-						<td>50€</td>
-						<td>6</td>
-						<td><button>Acheter</button></td>
-					</tr>
-					<tr>
-						<td>#P5792</td>
-						<td>Alimentation</td>
-						<td>Super pour alimenter votre appareil.</td>
-						<td>30€</td>
-						<td>22</td>
-						<td><button>Acheter</button></td>
-					</tr>
-				</tbody>
+        <table class="table table-hover">
+          <thead>
+            <th class="t-col-10">Code</th>
+            <th class="t-col-20">Désignation</th>
+            <th class="t-col-40">Description</th>
+            <th class="t-col-10">Prix</th>
+            <th class="t-col-10">Vendu</th>
+            <th class="t-col-10">Actions</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#P5789</td>
+              <td>Carte graphique</td>
+              <td>
+                Une carte graphique sont rôle est de produire une image
+                affichable sur un écran.
+              </td>
+              <td>200€</td>
+              <td>12</td>
+              <td><button>Acheter</button></td>
+            </tr>
+            <tr>
+              <td>#P5790</td>
+              <td>Processeur</td>
+              <td>Le coeur de votre ordinateur !</td>
+              <td>150€</td>
+              <td>29</td>
+              <td><button>Acheter</button></td>
+            </tr>
+            <tr>
+              <td>#P5791</td>
+              <td>Barrette de ram</td>
+              <td>
+                La mémoire vive, parfois abrégée avec l'acronyme anglais RAM...
+              </td>
+              <td>50€</td>
+              <td>6</td>
+              <td><button>Acheter</button></td>
+            </tr>
+            <tr>
+              <td>#P5792</td>
+              <td>Alimentation</td>
+              <td>Super pour alimenter votre appareil.</td>
+              <td>30€</td>
+              <td>22</td>
+              <td><button>Acheter</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-
-			</table>
-		</div>
-
-		<div id="contact">
-			<h1>Les membres de l'équipe</h1>
-		</div>
-
-
-	</div>
-	<script type="text/javascript">
-
-		function openPage(o, page){
-			$('#header .onglet').removeClass('active')
-			pages = ['accueil', 'produits', 'contact']
-			for (var i = 0; i < pages.length; i++) {
-				var object = '#' + pages[i];
-				if(page == pages[i]){
-					$(object).attr('style', 'display:block;')
-					$(o).addClass('active')
-				}else{
-					$(object).attr('style', 'display:none;')
-				}
-			}
-		}
-
-	</script>
-</body>
+      <div id="contact">
+        <h1>Les membres de l'équipe</h1>
+        <div class="details-membre">
+          <div class="membre">
+            <img class="img-membre" src="./photo_hugo.jpg" alt="Photo Hugo" />
+            <div class="infos">
+              <p>Hugo</p>
+              <p>Il est vraiment très beau</p>
+            </div>
+          </div>
+          <div class="membre">
+            <img class="img-membre" src="./photo_rudy.jpg" alt="Photo Rudy" />
+            <div class="infos">
+              <p>Rudy</p>
+              <p>Il est vraiment très beau</p>
+            </div>
+          </div>
+          <div class="membre">
+            <img class="img-membre" src="./photo_lucas.png" alt="Photo Lucas" />
+            <div class="infos">
+              <p>Lucas</p>
+              <p>Il est vraiment très beau</p>
+            </div>
+          </div>
+          <div class="membre">
+            <div class="infos">
+              <p>Olivier</p>
+              <p>Il est vraiment très beau</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function openPage(o, page) {
+        $("#header .onglet").removeClass("active");
+        pages = ["accueil", "produits", "contact"];
+        for (var i = 0; i < pages.length; i++) {
+          var object = "#" + pages[i];
+          if (page == pages[i]) {
+            $(object).attr("style", "display:block;");
+            $(o).addClass("active");
+          } else {
+            $(object).attr("style", "display:none;");
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
