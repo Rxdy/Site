@@ -8,3 +8,4 @@ https://github.com/runtipi/runtipi/tree/develop/scripts
 https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/
 https://forum.ubuntu-fr.org/viewtopic.php?id=324110
 https://fr.linux-console.net/?p=29605
+https://fr.linux-console.net/?p=29567
