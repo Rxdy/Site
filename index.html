@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lenofo</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenofo</title>
+    <link rel="icon" type="image/png" href="/lenofo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #dadada;
+        margin: 0;
+      }
 
-		body{
-			background-color: #dadada;
-			margin: 0;
-		}
+      #header {
+        background-color: white;
+        width: 100%;
+        display: inline-block;
+        height: 80px;
+      }
 
-		#header{
-			background-color: white;
-			width:100%;
-			display: inline-block;
-			height:80px;
-		}
+      #header #logo {
+        display: inline-block;
+        padding: 0% 2%;
+      }
+      img {
+        vertical-align: baseline;
+      }
+      #header #menu {
+        display: inline-block;
+        width: 50%;
+      }
 
-		#header #logo{
-			display: inline-block;
-			padding:0% 2%;
-		}
-		img{
-			vertical-align: baseline;
-		}
-		#header #menu{
-			display: inline-block;
-			width:50%;
-		}
+      .onglet {
+        border-radius: 10px 10px 0px 0px;
+        display: inline-block;
+        width: 20%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 66px;
+      }
 
-		.onglet {
-	   		border-radius: 10px 10px 0px 0px;
-	    	display: inline-block;
-	    	width: 20%;
-	    	text-align: center;
-	    	cursor: pointer;
-	    	font-size: 20px;
-	    	line-height: 66px;
-		}
+      .onglet:hover {
+        color: black;
+        background-color: #dadada;
+      }
 
-    	.onglet:hover {
-    		color: black;
-        	background-color: #dadada;
-    	}
+      .onglet.active {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        height: 62px;
+        margin-top: 2%;
+      }
 
-		.onglet.active{
-			display:inline-block;
-			text-align: center;
-			cursor:pointer;
-			background-color:black;
-			color:white;
-			height:62px;
-			margin-top: 2%;
-		}
+      .onglet:hover.active {
+      }
 
-      	.onglet:hover.active {
+      .content {
+        background-color: white;
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 10px;
+        padding-bottom: 2%;
+      }
 
-      	}
+      #accueil {
+      }
 
-		.content{
-			background-color:white;
-			width:90%;
-			margin-left:5%;
-			border-radius: 10px;
-			padding-bottom:2%;
-		}
+      #produits {
+        display: none;
+      }
 
-		#accueil{
+      #contact {
+        display: none;
+      }
 
-		}
-
-		#produits{
-			display:none;
-		}
-
-		#contact{
-			display:none;
-		}
-
-		h1{
-			padding:2%;
-		}
-		.table{
-			text-align: center !important;
-			border:none;
-			border-collapse: collapse;
-			width:90%;
-			margin: 0% 5% 0% 5%;
-			padding-bottom:2%;
-		}
-		thead{
-			text-align: center !important;
-			font-weight:bold;
-			background-color: black;
-			color:white;
-		}
-		.t-col-10{
-			width:10%;
-		}
-		.t-col-20{
-			width:20%;
-		}
-		.t-col-30{
-			width:30%;
-		}
-		.t-col-40{
-			width:40%;
-		}
-		th{
-			text-align: center;
-		}
-		
-
-	</style>
-</head>
-<body>
-	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-	<div id="header">
-		<div id="logo">	
-			<img src="lenofo.png">
-		</div>
-		<div id="menu">
-			<div class="onglet active" onclick="openPage(this, 'accueil')">Accueil</div>
-			<div class="onglet" onclick="openPage(this, 'produits')">Produits</div>
-			<div class="onglet" onclick="openPage(this, 'contact')">Contact</div>
-		</div>
-	</div>
+      h1 {
+        padding: 2%;
+      }
+      .table {
+        text-align: center !important;
+        border: none;
+        border-collapse: collapse;
+        width: 90%;
+        margin: 0% 5% 0% 5%;
+        padding-bottom: 2%;
+      }
+      thead {
+        text-align: center !important;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+      }
+      .t-col-10 {
+        width: 10%;
+      }
+      .t-col-20 {
+        width: 20%;
+      }
+      .t-col-30 {
+        width: 30%;
+      }
+      .t-col-40 {
+        width: 40%;
+      }
+      th {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <div id="header">
+      <div id="logo">
+        <img src="lenofo.png" />
+      </div>
+      <div id="menu">
+        <div class="onglet active" onclick="openPage(this, 'accueil')">
+          Accueil
+        </div>
+        <div class="onglet" onclick="openPage(this, 'produits')">Produits</div>
+        <div class="onglet" onclick="openPage(this, 'contact')">Contact</div>
+      </div>
+    </div>
 
     <div class="content">
       <div id="accueil">
