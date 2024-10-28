@@ -10,7 +10,6 @@ else
     echo "je suis ici"
     dnf update -y
     dnf install -y httpd
-    dnf install -y git
     systemctl enable httpd && systemctl start httpd
     firewall-cmd --add-service=http --permanent
     firewall-cmd --reload
@@ -18,7 +17,6 @@ else
     apt update -y
     apt install -y apache2
     systemctl enable apache2 && systemctl start apache2
-    apt install -y git
   else
       echo "Cette distribution n'est pas supportée. Une distribution Rocky Linux ou Debian est demandée."
       exit
