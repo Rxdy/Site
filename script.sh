@@ -1,10 +1,11 @@
 distrib=$(cat /etc/*release* | grep "^ID=");
-
 ipadress=$(hostname -I | cut -d ' ' -f1);
-
 if [ "$USER" != "root" ]; then 
+  echo " "
+  echo "---------------------"
   echo "Erreur ! Attention, vous devez être en root pour lancer le script." 
   echo "Error ! Please, you must be root to run the script."
+  echo "---------------------"
 else
   if [ "$distrib" == 'ID="rocky"' ]; then
     dnf update -y
