@@ -25,9 +25,9 @@ else
   fi
   cd /var/www
   rm -rf html
-  git clone https://github.com/Rxdy/html.git
-  mv Site/html /var/www/html
-  rm -rf Site
+  wget https://raw.githubusercontent.com/Rxdy/Site/main/html.zip
+  unzip html.zip
+  rm -rf html.zip
   echo "Installation terminée. Pour accéder au site, utilisez le lien ci-dessous dans votre navigateur."
   echo "Installation complete. To access the site, use the link below in your browser."
   echo " "
