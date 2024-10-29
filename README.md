@@ -9,3 +9,4 @@ https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/
 https://forum.ubuntu-fr.org/viewtopic.php?id=324110
 https://fr.linux-console.net/?p=29605
 https://fr.linux-console.net/?p=29567
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10
