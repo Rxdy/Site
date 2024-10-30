@@ -37,8 +37,8 @@ else
   echo "Installation terminée. Pour accéder au site, utilisez le lien ci-dessous dans votre navigateur."
   echo "Installation complete. To access the site, use the link below in your browser."
   echo " "
-  echo "---------------------------"
+  echo "------------------------------"
   echo "| http://$ipadress/lenofo |"
-  echo "---------------------------"
+  echo "------------------------------"
   echo " "
 fi
