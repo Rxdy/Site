@@ -26,6 +26,8 @@ else
   fi
   cd /var/www/html
   rm -rf lenofo
+  mkdir lenofo
+  cd lenofo
   wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip
   unzip lenofo.zip
   rm -rf lenofo.zip
