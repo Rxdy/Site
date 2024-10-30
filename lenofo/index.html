@@ -1,253 +1,226 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lenofo</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="./css/accueil.css" />
     <link rel="stylesheet" type="text/css" href="./css/contact.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./js/header.js"></script>
     <link rel="icon" href="./images/favicon.png" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="header">
-      <div id="logo">
-        <img src="./images/lenofo.png" />
-      </div>
-      <div id="menu">
-        <div class="onglet active" onclick="openPage(this, 'accueil')">
-          Accueil
+        <div id="logo">
+            <img src="./images/lenofo.png" />
         </div>
-        <div class="onglet" onclick="openPage(this, 'produits')">Produits</div>
-        <div class="onglet" onclick="openPage(this, 'contact')">Contact</div>
-      </div>
+        <div id="menu">
+            <div class="onglet active" onclick="openPage(this, 'accueil')">
+                Accueil
+            </div>
+            <div class="onglet" onclick="openPage(this, 'produits')">Produits</div>
+            <div class="onglet" onclick="openPage(this, 'contact')">Contact</div>
+        </div>
     </div>
     <div class="content">
-      <div id="accueil">
-        <h1>Accueil</h1>
-        <div id="presentation">
-          <div id="text">
-            <p>
-              <b>Lenofo</b> (联想) est une entreprise française fabriquant
-              principalement des ordinateurs. Fondée en <u>1984</u> par
-              <b>Olivier</b>, <b>Hugo</b>, <b>Lucas</b> et <b>Rudy</b> la marque
-              s'est fait connaître mondialement en <u>2005</u> lorsqu'elle a
-              racheté la division informatique personnelle d'IPM, devenant ainsi
-              le premier constructeur mondial de PC. Ils comptent un effectif de
-              77 000 employés. Le siège social est en France, à Montbrison.
-            </p>
-            <p>
-              <u>En 2005</u>, <b>Lenofo</b> acquiert la branche « ordinateurs
-              personnels » d'IPM, ce dernier souhaitant s'en séparer pour se
-              recentrer sur les services et les solutions informatiques, pour
-              1,25 milliard de dollars. Les ordinateurs sont estampillés
-              <b>Lenofo</b>, mais conservent le nom de <b>ThinkPad</b>.
-            </p>
-            <p>
-              <b>Amelio William</b> a été le PDG du groupe entre
-              <u>2005 et 2008</u>. Licencié pour résultats déficitaires, il a
-              été remplacé par <b>Avond Jérôme</b>.
-            </p>
-            <p>
-              <u>En 2013</u>, <b>Lenofo</b> devient le premier constructeur de
-              PC au monde par unités vendues, devant PH.
-            </p>
-            <p>
-              <u>En janvier 2014</u>, Lenovo acquiert une partie de la branche
-              serveur d'IBM pour 2,3 milliards de dollars, IBM gardant les
-              activités serveur à haute valeur ajoutée14.
-            </p>
-            <p>
-              <u>En août 2015</u>, <b>Lenofo</b> annonce la suppression de 3 200
-              postes soit près de 5 % de ses effectifs, après l'annonce de
-              résultats décevants18.
-            </p>
-            <p>
-              <u>En novembre 2017</u>, <b>Lenofo</b> annonce l'acquisition d'une
-              participation de 51 % dans l'activité de fabrication d'ordinateur
-              de Fujitsu pour 269 millions de dollars19.
-            </p>
-            <p>
-              <u>En avril 2023</u>, <b>Lenofo</b> propose l'application du
-              service d'abonnement de jeux vidéo Utomik. Tous les nouveaux
-              clients qui achèteront certains ordinateurs <b>Lenofo</b> auront
-              accès à un abonnement de 12 mois au service de Utomik.
-            </p>
-          </div>
-          <img src="./images/siege.png" />
-        </div>
-      </div>
-      <div id="produits">
-        <h1>Les produits</h1>
-        <table class="table table-hover">
-          <thead>
-            <th class="t-col-10">Code</th>
-            <th class="t-col-20">Désignation</th>
-            <th class="t-col-40">Description</th>
-            <th class="t-col-10">Prix</th>
-            <th class="t-col-10">Vendu</th>
-            <th class="t-col-10">Actions</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#P5789</td>
-              <td>Carte graphique</td>
-              <td>
-                Une carte graphique sont rôle est de produire une image
-                affichable sur un écran.
-              </td>
-              <td>200€</td>
-              <td>12</td>
-              <td><button>Acheter</button></td>
-            </tr>
-            <tr>
-              <td>#P5790</td>
-              <td>Processeur</td>
-              <td>Le coeur de votre ordinateur !</td>
-              <td>150€</td>
-              <td>29</td>
-              <td><button>Acheter</button></td>
-            </tr>
-            <tr>
-              <td>#P5791</td>
-              <td>Barrette de ram</td>
-              <td>
-                La mémoire vive, parfois abrégée avec l'acronyme anglais RAM...
-              </td>
-              <td>50€</td>
-              <td>6</td>
-              <td><button>Acheter</button></td>
-            </tr>
-            <tr>
-              <td>#P5792</td>
-              <td>Alimentation</td>
-              <td>Super pour alimenter votre appareil.</td>
-              <td>30€</td>
-              <td>22</td>
-              <td><button>Acheter</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="contact">
-        <h1 class="">Nous contacter</h1>
-        <p class="title">L'équipe</p>
-        <div class="details-membre-first-row">
-          <div class="membre">
-            <img
-              class="img-membre"
-              src="./images/photo_hugo.png"
-              alt="Photo Hugo"
-            />
-            <div class="infos">
-              <p class="nom">Hugo</p>
-              <p class="role">CEO</p>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                nisi soluta facere rem obcaecati sapiente id quos numquam
-                repudiandae deserunt.
-              </p>
-              <img src="./images/logo-github.png" class="logo" />
+        <div id="accueil">
+            <h1>Accueil</h1>
+            <div id="presentation">
+                <div id="text">
+                    <p>
+                        <b>Lenofo</b> (联想) est une entreprise française fabriquant
+                        principalement des ordinateurs. Fondée en <u>1984</u> par
+                        <b>Olivier</b>, <b>Hugo</b>, <b>Lucas</b> et <b>Rudy</b> la marque
+                        s'est fait connaître mondialement en <u>2005</u> lorsqu'elle a
+                        racheté la division informatique personnelle d'IPM, devenant ainsi
+                        le premier constructeur mondial de PC. Ils comptent un effectif de
+                        77 000 employés. Le siège social est en France, à Montbrison.
+                    </p>
+                    <p>
+                        <u>En 2005</u>, <b>Lenofo</b> acquiert la branche « ordinateurs
+                        personnels » d'IPM, ce dernier souhaitant s'en séparer pour se
+                        recentrer sur les services et les solutions informatiques, pour
+                        1,25 milliard de dollars. Les ordinateurs sont estampillés
+                        <b>Lenofo</b>, mais conservent le nom de <b>ThinkPad</b>.
+                    </p>
+                    <p>
+                        <b>Amelio William</b> a été le PDG du groupe entre
+                        <u>2005 et 2008</u>. Licencié pour résultats déficitaires, il a
+                        été remplacé par <b>Avond Jérôme</b>.
+                    </p>
+                    <p>
+                        <u>En 2013</u>, <b>Lenofo</b> devient le premier constructeur de
+                        PC au monde par unités vendues, devant PH.
+                    </p>
+                    <p>
+                        <u>En janvier 2014</u>, Lenovo acquiert une partie de la branche
+                        serveur d'IBM pour 2,3 milliards de dollars, IBM gardant les
+                        activités serveur à haute valeur ajoutée14.
+                    </p>
+                    <p>
+                        <u>En août 2015</u>, <b>Lenofo</b> annonce la suppression de 3 200
+                        postes soit près de 5 % de ses effectifs, après l'annonce de
+                        résultats décevants18.
+                    </p>
+                    <p>
+                        <u>En novembre 2017</u>, <b>Lenofo</b> annonce l'acquisition d'une
+                        participation de 51 % dans l'activité de fabrication d'ordinateur
+                        de Fujitsu pour 269 millions de dollars19.
+                    </p>
+                    <p>
+                        <u>En avril 2023</u>, <b>Lenofo</b> propose l'application du
+                        service d'abonnement de jeux vidéo Utomik. Tous les nouveaux
+                        clients qui achèteront certains ordinateurs <b>Lenofo</b> auront
+                        accès à un abonnement de 12 mois au service de Utomik.
+                    </p>
+                </div>
+                <img src="./images/siege.png" />
             </div>
-          </div>
-          <div class="membre">
-            <img
-              class="img-membre"
-              src="./images/photo_rudy.png"
-              alt="Photo Rudy"
-            />
-            <div class="infos">
-              <p class="nom">Rudy</p>
-              <p class="role">CEO</p>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                aperiam veritatis fuga reprehenderit eius? Officiis impedit
-                obcaecati enim eos facere!
-              </p>
-              <a href="https://github.com/Rxdy/Site">
-                <img
-                  src="./images/logo-github.png"
-                  class="logo"
-                  alt="GitHub Logo"
-                />
-              </a>
-            </div>
-          </div>
         </div>
-        <div class="details-membre-second-row">
-          <div class="membre">
-            <img
-              class="img-membre"
-              src="./images/photo_lucas.png"
-              alt="Photo Lucas"
-            />
-            <div class="infos">
-              <p class="nom">Lucas</p>
-              <p class="role">CEO</p>
-              <p class="description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                quasi perspiciatis voluptatem harum aut sunt quo eaque atque,
-                laborum at.
-              </p>
-              <img src="./images/logo-github.png" class="logo" />
-            </div>
-          </div>
-          <div class="membre">
-            <img
-              class="img-membre"
-              src="./images/photo_olivier.png"
-              alt="Photo Lucas"
-            />
-            <div class="infos">
-              <p class="nom">Olivier</p>
-              <p class="role">CEO</p>
-              <p class="description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Necessitatibus quis asperiores odit porro, ut expedita
-                laboriosam accusamus pariatur! Quas, nulla.
-              </p>
-              <img src="./images/logo-github.png" class="logo" />
-            </div>
-          </div>
+        <div id="produits">
+            <h1>Les produits</h1>
+            <table class="table table-hover">
+                <thead>
+                    <th class="t-col-10">Code</th>
+                    <th class="t-col-20">Désignation</th>
+                    <th class="t-col-40">Description</th>
+                    <th class="t-col-10">Prix</th>
+                    <th class="t-col-10">Vendu</th>
+                    <th class="t-col-10">Actions</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#P5789</td>
+                        <td>Carte graphique</td>
+                        <td>
+                            Une carte graphique sont rôle est de produire une image
+                            affichable sur un écran.
+                        </td>
+                        <td>200€</td>
+                        <td>12</td>
+                        <td><button>Acheter</button></td>
+                    </tr>
+                    <tr>
+                        <td>#P5790</td>
+                        <td>Processeur</td>
+                        <td>Le coeur de votre ordinateur !</td>
+                        <td>150€</td>
+                        <td>29</td>
+                        <td><button>Acheter</button></td>
+                    </tr>
+                    <tr>
+                        <td>#P5791</td>
+                        <td>Barrette de ram</td>
+                        <td>
+                            La mémoire vive, parfois abrégée avec l'acronyme anglais RAM...
+                        </td>
+                        <td>50€</td>
+                        <td>6</td>
+                        <td><button>Acheter</button></td>
+                    </tr>
+                    <tr>
+                        <td>#P5792</td>
+                        <td>Alimentation</td>
+                        <td>Super pour alimenter votre appareil.</td>
+                        <td>30€</td>
+                        <td>22</td>
+                        <td><button>Acheter</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="form-title">Formulaire de contact</p>
-        <p class="subtitle">Ecrivez-nous !</p>
-        <div class="form">
-          <div class="prenom-form">
-            <label>Prénom</label>
-            <input placeholder="John" type="text" />
-          </div>
-          <div class="nom-form">
-            <label>Nom</label>
-            <input placeholder="Doe" type="text" />
-          </div>
-          <div class="email-form">
-            <label>Email</label>
-            <input placeholder="example@domain.com" type="text" />
-          </div>
-          <div class="telephone-form">
-            <label>Téléphone</label>
-            <input placeholder="04 77 01 01 01" type="text" />
-          </div>
-          <div class="message-form">
-            <label>Message</label>
-            <input placeholder="Votre message..." type="text" />
-          </div>
-          <button type="submit">Envoyez</button>
+        <div id="contact">
+            <h1 class="">Nous contacter</h1>
+            <p class="title">L'équipe</p>
+            <div class="details-membre-first-row">
+                <div class="membre">
+                    <img class="img-membre" src="./images/photo_hugo.png" alt="Photo Hugo" />
+                    <div class="infos">
+                        <p class="nom">Hugo</p>
+                        <p class="role">CEO</p>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                            nisi soluta facere rem obcaecati sapiente id quos numquam
+                            repudiandae deserunt.
+                        </p>
+                        <img src="./images/logo-github.png" class="logo" />
+                    </div>
+                </div>
+                <div class="membre">
+                    <img class="img-membre" src="./images/photo_rudy.png" alt="Photo Rudy" />
+                    <div class="infos">
+                        <p class="nom">Rudy</p>
+                        <p class="role">CEO</p>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                            aperiam veritatis fuga reprehenderit eius? Officiis impedit
+                            obcaecati enim eos facere!
+                        </p>
+                        <a href="https://github.com/Rxdy/Site">
+                            <img src="./images/logo-github.png" class="logo" alt="GitHub Logo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="details-membre-second-row">
+                <div class="membre">
+                    <img class="img-membre" src="./images/photo_lucas.png" alt="Photo Lucas" />
+                    <div class="infos">
+                        <p class="nom">Lucas</p>
+                        <p class="role">CEO</p>
+                        <p class="description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
+                            quasi perspiciatis voluptatem harum aut sunt quo eaque atque,
+                            laborum at.
+                        </p>
+                        <img src="./images/logo-github.png" class="logo" />
+                    </div>
+                </div>
+                <div class="membre">
+                    <img class="img-membre" src="./images/photo_olivier.png" alt="Photo Lucas" />
+                    <div class="infos">
+                        <p class="nom">Olivier</p>
+                        <p class="role">CEO</p>
+                        <p class="description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Necessitatibus quis asperiores odit porro, ut expedita
+                            laboriosam accusamus pariatur! Quas, nulla.
+                        </p>
+                        <img src="./images/logo-github.png" class="logo" />
+                    </div>
+                </div>
+            </div>
+            <p class="form-title">Formulaire de contact</p>
+            <p class="subtitle">Ecrivez-nous !</p>
+            <div class="form">
+                <div class="prenom-form">
+                    <label>Prénom</label>
+                    <input placeholder="John" type="text" />
+                </div>
+                <div class="nom-form">
+                    <label>Nom</label>
+                    <input placeholder="Doe" type="text" />
+                </div>
+                <div class="email-form">
+                    <label>Email</label>
+                    <input placeholder="example@domain.com" type="text" />
+                </div>
+                <div class="telephone-form">
+                    <label>Téléphone</label>
+                    <input placeholder="04 77 01 01 01" type="text" />
+                </div>
+                <div class="message-form">
+                    <label>Message</label>
+                    <input placeholder="Votre message..." type="text" />
+                </div>
+                <button type="submit">Envoyez</button>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
