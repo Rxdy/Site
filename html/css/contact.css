@@ -1,0 +1,86 @@
+.details-membre {
+  padding: 100px;
+}
+
+.membre {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.infos {
+  padding: 20px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.details-membre-first-row {
+  display: flex;
+  justify-content: center;
+}
+
+.details-membre-second-row {
+  display: flex;
+  justify-content: center;
+}
+
+.nom {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.role {
+  color: red;
+  font-size: 15px;
+}
+
+.description {
+  max-width: 250px;
+  color: grey;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.prenom-form,
+.nom-form,
+.email-form,
+.telephone-form,
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
