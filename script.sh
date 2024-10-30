@@ -24,15 +24,15 @@ else
       echo "This distribution is not supported. A Rocky Linux or Debian distribution is required."
       exit
   fi
-  cd /var/www
-  rm -rf html
-  wget https://raw.githubusercontent.com/Rxdy/Site/main/html.zip
-  unzip html.zip
-  rm -rf html.zip
+  cd /var/www/html
+  rm -rf lenofo
+  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip
+  unzip lenofo.zip
+  rm -rf lenofo.zip
   echo "Installation terminée. Pour accéder au site, utilisez le lien ci-dessous dans votre navigateur."
   echo "Installation complete. To access the site, use the link below in your browser."
   echo " "
   echo "---------------------"
-  echo "http://"$ipadress
+  echo "http://$ipadress/lenofo"
   echo "---------------------"
 fi
