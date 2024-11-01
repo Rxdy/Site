@@ -1,12 +1,15 @@
 # Document explicatif sur le projet d’installation d’un site Web via script
 
+---
 ## 1. Introduction
 
 Nous nous sommes rapidement mis en place, ce qui nous a permis d’aborder notre projet avec sérieux. Plutôt que de chercher à aller vite, nous avons pris le temps de concevoir un processus d’installation automatisée de site web, fiable et simple à utiliser. À chaque étape du développement, nous avons réfléchi à comment rendre l’expérience utilisateur la plus fluide possible tout en assurant une installation robuste et en anticipant les défis techniques que nous pourrions rencontrer.
 
+---
 ## 2. Méthodologie
 Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
 
+---
 ## 3. Déroulement du projet
 
 ### 3.1 Inspiration de RunTipi
@@ -102,6 +105,7 @@ Pour simplifier l’exécution du script, nous avons généré un lien raccourci
 **Lien raccourci :**
 `wget -qO- https://bit.ly/lenofo | bash`
 
+---
 ## 4. Problèmes rencontrés et solutions
 
 ### 4.1 Structure de fichiers multiples et liens RAW sur GitHub
@@ -137,10 +141,11 @@ Après plusieurs essais, nous avons découvert qu’il était possible de config
 
 Nous avons cependant constaté qu'il fallait patienter quelques minutes après chaque modification du fichier sur GitHub avant de télécharger, car GitHub semble prendre un certain temps pour synchroniser les fichiers. Sans cette attente, `wget` pouvait renvoyer une archive ZIP corrompue.
 
-
+---
 ## 5. Conclusion
 Notre objectif était de rendre l’installation aussi simple et automatisée que possible pour l’utilisateur final. Nous avons centralisé toutes les étapes dans un seul script, compatible à la fois avec Debian et Rocky Linux comme demandé dans les consignes. Le script ne s'execute pas sous d'autres distribution cependent il est facilement adaptable pour les autres. Cette expérience nous a permis de développer des compétences avancées en scripting Bash et en gestion de systèmes Linux tout en rendant notre solution accessible et facile à utiliser.
 
+---
 ## 6. Outils utilisés
 
 - Internet
@@ -150,3 +155,52 @@ Notre objectif était de rendre l’installation aussi simple et automatisée qu
 - GitHub
 - GitLens
 - Cours
+
+## 7. Script final
+
+```bash
+distrib=$(cat /etc/*release* | grep "^ID=");
+ipadress=$(hostname -I | cut -d ' ' -f1);
+path="/var/www/html"
+if [ "$USER" != "root" ]; then
+  echo "---------------------------------------------------------------------"
+  echo "Erreur ! Attention, vous devez être en root pour lancer le script." 
+  echo "Error ! Please, you must be root to run the script."
+  echo "---------------------------------------------------------------------"
+else
+  if [ "$distrib" == 'ID="rocky"' ]; then
+    dnf update -y
+    dnf install -y httpd
+    dnf install -y git
+    systemctl enable httpd && systemctl start httpd
+    firewall-cmd --add-service=http --permanent
+    firewall-cmd --reload
+  elif [ "$distrib" == 'ID=debian' ]; then
+    apt update -y
+    apt install -y apache2
+    apt install -y git
+    systemctl enable apache2 && systemctl start apache2
+  else
+      echo "----------------------------------------------------------------------------------------------"
+      echo "Cette distribution n'est pas supportée. Une distribution Rocky Linux ou Debian est demandée."
+      echo "This distribution is not supported. A Rocky Linux or Debian distribution is required."
+      echo "----------------------------------------------------------------------------------------------"
+      exit
+  fi
+  cd $path
+  rm -rf lenofo
+  mkdir lenofo
+  cd lenofo
+  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip
+  unzip lenofo.zip -d $path/lenofo
+  rm -rf lenofo.zip
+  echo " "
+  echo "Installation terminée. Pour accéder au site, utilisez le lien ci-dessous dans votre navigateur."
+  echo "Installation complete. To access the site, use the link below in your browser."
+  echo " "
+  echo "------------------------------"
+  echo "| http://$ipadress/lenofo |"
+  echo "------------------------------"
+  echo " "
+fi
+```
