@@ -49,7 +49,7 @@ else
   rm -rf $path
   mkdir $path
   # Téléchargement du zip dans le GitHub.
-  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip -O $path/lenofo.zip
+  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip -O $path.zip
   # Unzip du fichier que l'on viens de télécharger.
   unzip lenofo.zip -d $path
   # Suppression du fichier zip : lenofo.zip. 
