@@ -32,7 +32,7 @@ Voici ou vous pouvez retrouver les ISO des distributions respective :
 - `Debian 12 :` https://www.debian.org/distrib/ 
 - `Rocky 9 :` https://rockylinux.org/fr/download
 
-Si vous prenez le choix de la distribution rocky nous avons une documentation pour l'installation :
+Si vous prenez le choix de la distribution rocky nous avons une documentation pour l'installation : https://github.com/CNAM2024/Devoirs/tree/main/EXO1_Doc_Rocky/LAGOUARDAT.Hugo
 Pour debian, voici un lien pour un tutoriel sur youtube : https://www.youtube.com/watch?v=2JIBxi7tywY
 
 ### Paramétrage réseau en accès par pont
@@ -46,8 +46,8 @@ Changer le mode d'accès réseau par : `Accès par pont`.
 
 Afin de poursuivre la manipulation vous aurez besoin de :
 
-- `Ordinateur physique`*
-- `Serveur physique`*
+- `Ordinateur physique`
+- `Serveur physique`
 
 ---
 ## Connection au serveur web
