@@ -1,6 +1,9 @@
 # Site
 Commande script : 
-wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/script.sh | bash
+wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/lenofo.sh | bash
+
+commande script racourci :
+wget -qO- https://bit.ly/lenofo | bash
 
 
 http://www.tux-planet.fr/connaitre-la-version-de-linux-installe/
