@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-Nous nous sommes mis en place, ce qui nous a permis d’aborder notre projet avec sérieux. Plutôt que de chercher à aller vite, nous avons pris le temps de concevoir un processus d’installation automatisée de site web, fiable et simple à utiliser. À chaque étape du développement, nous avons réfléchi à comment rendre l’expérience utilisateur la plus fluide possible tout en assurant une installation robuste et en anticipant les défis techniques que nous pourrions rencontrer.
+Nous nous sommes rapidement mis en place, ce qui nous a permis d’aborder notre projet avec sérieux. Plutôt que de chercher à aller vite, nous avons pris le temps de concevoir un processus d’installation automatisée de site web, fiable et simple à utiliser. À chaque étape du développement, nous avons réfléchi à comment rendre l’expérience utilisateur la plus fluide possible tout en assurant une installation robuste et en anticipant les défis techniques que nous pourrions rencontrer.
 
 ## 2. Méthodologie
 Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
@@ -48,6 +48,25 @@ Pour rassembler les scripts en un seul, nous avons ajouté une détection automa
 
 - Source de cette commande : [http://www.tux-planet.fr/connaitre-la-version-de-linux-installe/](http://www.tux-planet.fr/connaitre-la-version-de-linux-installe/)
 
+Le resultat de cette commande retourne :
+```
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
+Nous avons seulement besoin du résultat de la 6ème ligne. Pour cela nous allons utiliser la commande `grep` qui va retourner un résultat en fonction de ce qu'on lui demande. Nous allons chercher uniquement la ligne qui contient `ID=`. Pour éviter qu'on nous retourne aussi la 3ème ligne qui contient aussi `ID=` nous allons spécifier que nous ne voulons rien devant avec ceci `^`. 
+
+La commande finale est : `cat /etc/*release* | grep "^ID="`. 
+Elle retourne ce résultat sous debian : `ID=debian` et celui-ci sous rocky : `ID="rocky"`
+
+Nous ne pouvons pas plus simplifier le résultat avec la commande `cut` a cause des résultats qui sont de syntaxe différente. 
+
 ### 3.5 Messages d’information utilisateur
 Pour rendre le script plus intuitif, nous avons ajouté des messages expliquant le succès ou les erreurs d’exécution, ainsi qu’un lien vers l’adresse IP du site web installé. Nous avons touvé un moyen facile de récupérer l'addresse ip grace au site : [https://fr.linux-console.net/?p=29567](https://fr.linux-console.net/?p=29567)
 
@@ -62,6 +81,7 @@ Nous avons également utilisé des variables pour stocker certains résultats de
 Nous avons aussi beaucoup rechercher de commande avec le Man intégré à Linux et sur internet avec des recherches poussé sur le grep, egrep, cut et bien d'autre.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 """"détaille du cut""""
 =======
 Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le resultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
@@ -74,6 +94,20 @@ Pour imager cette étape cela permet de placer dans un tableau les valeurs entre
 
 Nous la stockons dans la variable : `ipadress=$(hostname -I | cut -d ' ' -f1);`
 >>>>>>> e49a487 (add explication cut)
+=======
+Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le resultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
+
+- Option `-d` : Permet de parser le resultat en fonction d'un champs spécifique. Dans notre cas : `-d ' '`, espace vide.
+
+Pour imager cette étape cela permet de placer dans un tableau les valeurs entre chaque espace, donc première valeur `192.168.1.36` et seconde valeur `2001:861:2044:50a0:a00:27ff:fe49:f993`.
+
+- Option -f[nombre] : Permet d'afficher la partit parser souhaité, en spécifiant un nombre pour la partit souhaité. Dans notre cas `-f1`, pour la première partit du résultat. Ce qui nous retourne `192.168.1.36`. 
+
+Nous la stockons dans la variable : `ipadress=$(hostname -I | cut -d ' ' -f1);`
+=======
+""""détaille du cut""""
+>>>>>>> origin/main
+>>>>>>> origin/Rudy
 
 ### 3.7 Simplification de l’exécution du script
 
