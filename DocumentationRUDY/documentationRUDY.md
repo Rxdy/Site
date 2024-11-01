@@ -2,22 +2,20 @@
 ---
 ## Introduction
 
-Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis`, `Préparation de l'environnement`, `Connection au serveur web`, `Héberger le site web`. De l'hébergement d'un site internet sur un `serveur web` distant en `accès par pont`. 
+Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis serveur virtuel`, `Préparation de l'environnement`,`Pré-requis serveur physique`, `Connection au serveur web`, `Héberger le site web`. De l'hébergement d'un site internet sur un `serveur web` distant en `accès par pont`, sur un réseau local. 
 
 ---
-## Pré-requis
+## Pré-requis serveur virtuel
 
 Afin de poursuivre la manipulation vous aurez besoin de :
 
 - `VirtualBox`
-- `Machine physique`*
-- `Serveur physique ou serveur virtuel`*
-- `Réseau par pont`*
-
-(_Obligatoire_*)
+- `Ordinateur physique`
+- `Serveur virtuel`
+- `Réseau par pont`
 
 ---
-## Préparation de l'environnement
+## Préparation de l'environnement virtuel
 
 Il existe deux solutions pour héberger son site sur un `serveur distant`. Il peut être sur un serveur physique ou un serveur virtuel. Si vous choisissez d'utiliser un serveur virtuel vous aurez besoin de VirtualBox.
 
@@ -42,6 +40,14 @@ Pour debian, voici un lien pour un tutoriel sur youtube : https://www.youtube.co
 Attention a bien configurer le réseau de la machine virtuel. `Clique droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
 
 Changer le mode d'accès réseau par : `Accès par pont`.
+
+---
+## Pré-requis serveur physique
+
+Afin de poursuivre la manipulation vous aurez besoin de :
+
+- `Ordinateur physique`*
+- `Serveur physique`*
 
 ---
 ## Connection au serveur web
