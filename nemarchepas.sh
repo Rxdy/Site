@@ -30,7 +30,7 @@ else
   rm -rf lenofo
   mkdir lenofo
   cd lenofo
-  wget https://github.com/Rxdy/Site/main/lenofo.zip
+  wget https://github.com/Rxdy/Site/blob/main/lenofo.zip
   unzip lenofo.zip -d $path/lenofo
   rm -rf lenofo.zip
   echo " "
