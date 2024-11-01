@@ -1,13 +1,21 @@
-# Site lenofo
-/documentation/EXPLICATION.md 
-ceci c'est pour le décroulezment du projet 
+# Site Lenofo
+
+- [Explication du déroulement du projet](/documentation/EXPLICATION.md)
+- [Installation de Rocky Linux](/documentation/Rocky/Rocky.md)
+- [Documentation d'installation du script](/documentation/utilisateur/documentation.md)
+
+### Commandes d'installation
+
+**Commande complète du script :**
+`wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/lenofo.sh | bash`
+
+**Commande raccourcie du script :**
+`wget -qO- https://bit.ly/lenofo | bash`
 
 
 
-Commande script : 
-wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/lenofo.sh | bash
 
-commande script racourci :
-wget -qO- https://bit.ly/lenofo | bash
+
+
 
 
