@@ -48,7 +48,7 @@ Pour rassembler les scripts en un seul, nous avons ajouté une détection automa
 
 - Source de cette commande : [http://www.tux-planet.fr/connaitre-la-version-de-linux-installe/](http://www.tux-planet.fr/connaitre-la-version-de-linux-installe/)
 
-Le resultat de cette commande retourne :
+Le résultat de cette commande retourne :
 ```
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
 NAME="Debian GNU/Linux"
@@ -76,14 +76,14 @@ Et la commande : `hostname -I`
 
 ### 3.6 Autre recherche et Variable
 Nous avons également utilisé des variables pour stocker certains résultats de commandes, en suivant les indications du site :  
-- [https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/](https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/)
+- [https://www.it-connect.fr/mettre-le-résultat-dune-commande-dans-une-variable/](https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/)
 
 Nous avons aussi beaucoup rechercher de commande avec le Man intégré à Linux et sur internet avec des recherches poussé sur le grep, egrep, cut et bien d'autre.
 
 
-Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le resultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
+Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le résultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
 
-- Option `-d` : Permet de parser le resultat en fonction d'un champs spécifique. Dans notre cas : `-d ' '`, espace vide.
+- Option `-d` : Permet de parser le résultat en fonction d'un champs spécifique. Dans notre cas : `-d ' '`, espace vide.
 
 Pour imager cette étape cela permet de placer dans un tableau les valeurs entre chaque espace, donc première valeur `192.168.1.36` et seconde valeur `2001:861:2044:50a0:a00:27ff:fe49:f993`.
 
@@ -140,3 +140,13 @@ Nous avons cependant constaté qu'il fallait patienter quelques minutes après c
 
 ## 5. Conclusion
 Notre objectif était de rendre l’installation aussi simple et automatisée que possible pour l’utilisateur final. Nous avons centralisé toutes les étapes dans un seul script, compatible à la fois avec Debian et Rocky Linux comme demandé dans les consignes. Le script ne s'execute pas sous d'autres distribution cependent il est facilement adaptable pour les autres. Cette expérience nous a permis de développer des compétences avancées en scripting Bash et en gestion de systèmes Linux tout en rendant notre solution accessible et facile à utiliser.
+
+## 6. Outils utilisés
+
+- Internet
+- Google Drive 
+- Discord
+- Git
+- GitHub
+- GitLens
+- Cours
