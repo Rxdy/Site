@@ -54,6 +54,11 @@
 
 .subtitle {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.color-subtitle {
+  color: red;
 }
 
 .form {
@@ -61,26 +66,53 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 input {
-  min-width: 300px;
+  min-width: 400px;
   margin-bottom: 20px;
+  height: 40px;
+  padding: 5px;
 }
 
 .prenom-form,
 .nom-form,
 .email-form,
 .telephone-form,
-.message-form {
+.message-form,
+.objet-form {
   display: flex;
   flex-direction: column;
 }
 
-button {
+.full-width-input {
+  min-width: 810px;
+}
+
+input.full-width-input.full-height {
+  min-height: 150px;
+}
+
+input:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+.btn-submit {
   border: none;
   background-color: red;
   color: #fff;
   border-radius: 5px;
   padding: 10px;
+}
+
+.btn-submit:hover {
+  box-shadow: inset 0px 10px 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-content-form,
+.mid-content-form {
+  display: flex;
+  gap: 10px;
 }
