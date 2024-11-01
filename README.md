@@ -7,7 +7,7 @@
 ### Commandes d'installation
 
 **Commande complète du script :**
-`wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/lenofo.sh | bash`
+`wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/script.sh | bash`
 
 **Commande raccourcie du script :**
 `wget -qO- https://bit.ly/lenofo | bash`
