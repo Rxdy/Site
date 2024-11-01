@@ -61,7 +61,19 @@ Nous avons également utilisé des variables pour stocker certains résultats de
 
 Nous avons aussi beaucoup rechercher de commande avec le Man intégré à Linux et sur internet avec des recherches poussé sur le grep, egrep, cut et bien d'autre.
 
+<<<<<<< HEAD
 """"détaille du cut""""
+=======
+Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le resultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
+
+- Option `-d` : Permet de parser le resultat en fonction d'un champs spécifique. Dans notre cas : `-d ' '`, espace vide.
+
+Pour imager cette étape cela permet de placer dans un tableau les valeurs entre chaque espace, donc première valeur `192.168.1.36` et seconde valeur `2001:861:2044:50a0:a00:27ff:fe49:f993`.
+
+- Option -f[nombre] : Permet d'afficher la partit parser souhaité, en spécifiant un nombre pour la partit souhaité. Dans notre cas `-f1`, pour la première partit du résultat. Ce qui nous retourne `192.168.1.36`. 
+
+Nous la stockons dans la variable : `ipadress=$(hostname -I | cut -d ' ' -f1);`
+>>>>>>> e49a487 (add explication cut)
 
 ### 3.7 Simplification de l’exécution du script
 
