@@ -47,9 +47,12 @@ else
   fi
   # On force la suppression du fichier lenofo, si il y en a déjà un. Lors d'une mise à jour par exemple.
   rm -rf $path
+  # On créé un dossier.
   mkdir $path
+  # On se déplace dans le dossier.
+  cd $path
   # Téléchargement du zip dans le GitHub.
-  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip -O $path.zip
+  wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip
   # Unzip du fichier que l'on viens de télécharger.
   unzip lenofo.zip -d $path
   # Suppression du fichier zip : lenofo.zip. 
