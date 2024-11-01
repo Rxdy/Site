@@ -46,18 +46,16 @@ else
     exit
   fi
   # On force la suppression du fichier lenofo, si il y en a déjà un. Lors d'une mise à jour par exemple.
-  rm -f $path
-  
+  rm -rf $path
   # Téléchargement du zip dans le GitHub.
   wget https://raw.githubusercontent.com/Rxdy/Site/main/lenofo.zip -O $path
   # Unzip du fichier que l'on viens de télécharger.
   unzip lenofo.zip -d $path
   # Suppression du fichier zip : lenofo.zip. 
   rm -f $path/lenofo.zip 
-  
-  # Variable pour stocker les fichiers présent dans l'emplacement d'apache
+  # Variable pour stocker les fichiers présent dans l'emplacement d'apache.
   testZip=$(ls $path);
-  # 
+  # Condition pour savoir si il y a des fichiers dans le dossier d'apache.
   if [ "$testZip" == '' ]; then
     # Aucun fichier trouvé dans le répertoire.
     # Affiche un message d'erreur.
