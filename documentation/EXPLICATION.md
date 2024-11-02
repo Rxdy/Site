@@ -5,19 +5,29 @@
 
 Nous nous sommes rapidement mis en place, ce qui nous a permis d’aborder notre projet avec sérieux. Plutôt que de chercher à aller vite, nous avons pris le temps de concevoir un processus d’installation automatisée de site web, fiable et simple à utiliser. À chaque étape du développement, nous avons réfléchi à comment rendre l’expérience utilisateur la plus fluide possible tout en assurant une installation robuste et en anticipant les défis techniques que nous pourrions rencontrer.
 
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+    <img src="./images/2024-11-02-18-03-09.png" alt="Image 1" width="200"/>
+    <img src="./images/2024-11-02-18-03-47.png" alt="Image 2" width="200"/>
+    <img src="./images/2024-11-02-18-03-26.png" alt="Image 3" width="200"/>
+    <img src="./images/2024-11-02-18-04-08.png" alt="Image 4" width="200"/>
+</div>
+
 ---
 ## 2. Méthodologie
-Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
+Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. 
+Nous avons choisi de publier notre code sur un dépôt GitHub public [^2] pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
 
 ---
 ## 3. Déroulement du projet
 
 ### 3.1 Inspiration de RunTipi
-Nous nous sommes inspirés d’un script d’installation déjà connu, celui de RunTipi, qui utilise la commande suivante :
+Nous nous sommes inspirés [^4] d’un script d’installation déjà connu, celui de RunTipi, qui utilise la commande suivante :
 
-`curl -L https://setup.runtipi.io | bash`
+`curl -L https://setup.runtipi.io | bash` [^1]
 
-- Lien du script RunTipi : [https://setup.runtipi.io](https://setup.runtipi.io)
+- Lien du script RunTipi : [https://setup.runtipi.io](https://setup.runtipi.io) [^3]
+
+![alt text](./images/2024-11-02-18-12-02.png)
 
 À partir de cette idée, nous avons développé un premier script d’installation avec `wget` (qui est disponible nativement sur les distributions linux.), permettant le téléchargement direct depuis GitHub. Nous avons effectué nos premiers tests sous Debian, avec un simple fichier `index.html` au départ.
 
@@ -286,3 +296,14 @@ else
 exit
 fi
 ```
+---
+# Note
+
+[^1] Cette commande télécharge un script d'installation depuis une URL, puis le passe directement à bash pour l'exécuter. C'est une méthode courante pour installer rapidement des logiciels, mais elle comporte des risques de sécurité, car elle exécute un script téléchargé en ligne sans vérification préalable.
+
+[^2] Le choix d'un dépôt GitHub public permet de faciliter l'accès direct au code via `wget`, ce qui n'aurait pas été possible avec un dépôt privé sans authentification, rendant l'installation et les tests plus simples pour tous les membres.
+
+[^3] En fait ce lien raccourci pointe vers un script install.sh suivant https://raw.githubusercontent.com/runtipi/runtipi/master/scripts/install.sh.
+
+[^4] 
+
