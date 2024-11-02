@@ -72,11 +72,11 @@ Nous avons seulement besoin du résultat de la 6ème ligne. Pour cela nous allon
 La commande finale est : `cat /etc/*release* | grep "^ID="`. 
 Elle retourne ce résultat sous debian : `ID=debian` et celui-ci sous rocky : `ID="rocky"`
 
-Nous ne pouvons pas plus simplifier le résultat avec la commande `cut` à cause des résultats qui sont de syntaxe différente. 
+Nous ne pouvons pas plus simplifier le résultat avec la commande `cut` a cause des résultats qui sont de syntaxe différente. 
 
 ---
 ### 3.5 Messages d’information utilisateur
-Pour rendre le script plus intuitif, nous avons ajouté des messages expliquant le succès ou les erreurs d’exécution, ainsi qu’un lien vers l’adresse IP du site web installé. Nous avons trouvé un moyen facile de récupérer l'addresse ip grace au site : [https://fr.linux-console.net/?p=29567](https://fr.linux-console.net/?p=29567)
+Pour rendre le script plus intuitif, nous avons ajouté des messages expliquant le succès ou les erreurs d’exécution, ainsi qu’un lien vers l’adresse IP du site web installé. Nous avons touvé un moyen facile de récupérer l'addresse ip grace au site : [https://fr.linux-console.net/?p=29567](https://fr.linux-console.net/?p=29567)
 
 Cela facilite le processus, car le résultat est affiché sur une seule ligne, ce qui rend le stockage de la variable dans le script plus simple et permet d'effectuer des opérations de filtrage et de traitement.
 
@@ -87,10 +87,10 @@ Et la commande : `hostname -I`
 Nous avons également utilisé des variables pour stocker certains résultats de commandes, en suivant les indications du site :  
 - [https://www.it-connect.fr/mettre-le-résultat-dune-commande-dans-une-variable/](https://www.it-connect.fr/mettre-le-resultat-dune-commande-dans-une-variable/)
 
-Nous avons aussi beaucoup rechercher de commandes avec le MAN intégré à Linux et sur internet avec des recherches poussées sur le grep, egrep, cut et bien d'autres.
+Nous avons aussi beaucoup rechercher de commande avec le Man intégré à Linux et sur internet avec des recherches poussé sur le grep, egrep, cut et bien d'autre.
 
 #### Stocker une valeur répétitive
-Afin d'éviter de se répéter et de pouvoir modifier les chemins simplement, nous avons créé une variable afin de l'appeler lorsque on en a besoin. Et si un jour nous avons besoin de la modifier, on peux la modifier une seul fois au début du script pour tout le script. Comme cela : `path=$'/var/www/html/lenofo'`.
+Afin d'éviter de se répéter et de pouvoir modifier le chemin, nous avons créé une variable afin de l'appeler lorsque ont en a besoin. Et si un jour nous avons besoin de la modifier, ont peux la modifier une seul fois au début du script pour tout le script. Comme cela : `path=$'/var/www/html/lenofo'`.
 
 #### Récupération de l'IP dans une variable
 Pour stocker dans la variable seulement l'ip du résultat de la commande `hostname -I`, nous avons dû utiliser la commande cut, car le résultat retourner était : `192.168.1.36 2001:861:2044:50a0:a00:27ff:fe49:f993`. Et nous voulons stocker que l'ip. Nous avons donc spécifier deux options pour séparer ce résultat. 
