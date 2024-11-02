@@ -29,19 +29,35 @@ Nous nous sommes inspirés [^4] d’un script d’installation déjà connu, cel
 
 ![alt text](./images/2024-11-02-18-12-02.png)
 
-À partir de cette idée, nous avons développé un premier script d’installation avec `wget` (qui est disponible nativement sur les distributions linux.), permettant le téléchargement direct depuis GitHub. Nous avons effectué nos premiers tests sous Debian, avec un simple fichier `index.html` au départ.
+À partir de cette idée, nous avons développé un premier script d’installation avec `wget` (qui est disponible par défaut sur les distributions linux.), permettant le téléchargement direct depuis GitHub. Nous avons effectué nos premiers tests sous Debian, avec un simple fichier `index.html` au départ.
 
 ---
 ### 3.2 Vérification des droits Root
-Après avoir effectué plusieurs tests entre nous, nous avons rencontré des problèmes de permissions lorsque le script était exécuté en tant qu’utilisateur standard. Pour garantir que le script s’exécute avec les droits nécessaires, nous avons ajouté une étape de vérification pour nous assurer que l’utilisateur est bien en mode root sinon un message explicatif est donné.
+Après avoir effectué plusieurs tests entre nous, nous avons rencontré des problèmes de permissions lorsque le script était exécuté en tant qu’utilisateur standard [^5]. Pour garantir que le script s’exécute avec les droits nécessaires, nous avons ajouté une étape de vérification pour nous assurer que l’utilisateur est bien en mode root sinon un message explicatif est donné.
 
 Pour implémenter cette vérification, nous avons suivi les instructions trouvées sur le forum Ubuntu :
 - [https://forum.ubuntu-fr.org/viewtopic.php?id=324110](https://forum.ubuntu-fr.org/viewtopic.php?id=324110)
 
+![alt text](./images/2024-11-02-18-48-43.png)
+
 ---
 ### 3.3 Adaptation pour Debian et Rocky Linux
 
-Lors de l'adaptation de notre script pour qu'il fonctionne à la fois sur Debian et Rocky Linux, nous avons dû prendre en compte les différences entre les gestionnaires de paquets de ces deux distributions.
+Lors de l'adaptation de notre script pour qu'il fonctionne à la fois sur Debian et Rocky Linux, nous avons dû prendre en compte les différences entre les gestionnaires de paquets de ces deux distributions [^6].
+
+ci-dessous tableau présentant différences entre les deux gestionnaires de paquets:
+
+| Caractéristique             | Debian                             | Rocky Linux                     |
+|-----------------------------|------------------------------------|---------------------------------|
+| **Gestionnaire de paquets** | APT (Advanced Package Tool)       | DNF (Dandified YUM)             |
+| **Commande de mise à jour** | `apt update`                      | `dnf update`                    |
+| **Installation de paquets** | `apt install <package_name>`      | `dnf install <package_name>`    |
+| **Suppression de paquets**  | `apt remove <package_name>`       | `dnf remove <package_name>`     |
+| **Nettoyage des paquets**   | `apt autoremove`                  | `dnf autoremove`                |
+| **Sources de paquets**      | `/etc/apt/sources.list`           | `/etc/yum.repos.d/`             |
+| **Mise à jour complète du système** | `apt upgrade`            | `dnf upgrade`                   |
+| **Exemple de distribution** | Debian, Ubuntu                    | Rocky Linux, CentOS, Fedora     |
+
 
 ---
 #### Gestionnaires de paquets
@@ -305,5 +321,8 @@ fi
 
 [^3] En fait ce lien raccourci pointe vers un script install.sh suivant https://raw.githubusercontent.com/runtipi/runtipi/master/scripts/install.sh.
 
-[^4] 
+[^4] Le script RunTipi inspire des bonnes pratiques pour notre projet : vérification de l'architecture et compatibilité multi-plateforme, arguments en ligne de commande pour la flexibilité, détection automatique de l'OS pour adapter les commandes, et installation des dépendances. En suivant ces exemples tout en restant dans le cadre de nos compétences, nous pourrions rendre notre script plus robuste et adaptable.
 
+[^5] Un **utilisateur standard** est un utilisateur qui n'a pas de privilèges administratifs ou d'accès root sur le système. Contrairement à l'utilisateur root, un utilisateur standard est limité dans les actions qu'il peut effectuer, notamment pour des opérations sensibles comme l'installation de logiciels, la modification de fichiers système ou la configuration des paramètres de sécurité. Ces restrictions sont mises en place pour protéger le système et éviter des modifications involontaires ou malveillantes. Dans le contexte de la phrase, cela signifie que le script nécessite des droits élevés (root) pour fonctionner correctement, car certaines commandes dans le script nécessitent des permissions que l'utilisateur standard ne possède pas.
+
+[^6] 
