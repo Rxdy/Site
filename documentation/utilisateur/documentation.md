@@ -14,7 +14,7 @@ Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis serveu
 
 Afin de poursuivre la manipulation vous aurez besoin de :
 
-- 'Ordinateur physique', à partir duquel nous pourons nous connecter en ssh à la VM
+- 'Ordinateur physique', à partir duquel nous pourrons nous connecter en ssh à la VM
 - 'réseau local'
 - `logiciel de virtualisation, ici VirtualBox`
 - `Serveur virtuel`, c'est à dire une machine virtuelle installé sur virtualbox avec serveur ssh [^7]
@@ -102,7 +102,7 @@ Saisisser cette fois le mot de passe adminstrateur.
 
 ![alt text](./images/2024-11-02-16-24-58.png)
 
-Bravo, vous êtes connecté en tant qu'administrateur root depuis votre machine physique sur le serveur web distant, ce qui vous garantit un accès complet sans restrictions à toutes les commandes
+Bravo, vous êtes connecté en tant qu'administrateur root depuis votre machine physique sur le serveur web distant, ce qui vous garantit un accès complet sans restrictions à toutes les commandes, tous les dossiers et tous les fichiers.
 
 ---
 ## Héberger le site web
@@ -126,7 +126,17 @@ Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fi
 ![alt text](./images/2024-11-02-16-37-39.png)
 
 ## Vérifier la bonne installation et le bon fonctionnalité du site web "lenofo" sur notre serveur.
-Pour tout navigateur (présent sur un pc,mac,vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO"
+Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".
+
+
+
+![alt text](./images/2024-11-02-17-04-03.png)
+
+![alt text](./images/2024-11-02-17-04-41.png)
+
+![alt text](./images/2024-11-02-17-05-04.png)
+
+
 
 ---
 
