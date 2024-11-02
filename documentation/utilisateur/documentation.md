@@ -126,9 +126,9 @@ Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fi
 ![alt text](./images/2024-11-02-16-37-39.png)
 
 ## Vérifier la bonne installation et le bon fonctionnalité du site web "lenofo" sur notre serveur.
-Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".
+Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".[^8]
 
-
+![alt text](./images/2024-11-02-17-09-45.png)
 
 ![alt text](./images/2024-11-02-17-04-03.png)
 
@@ -155,3 +155,5 @@ Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de
 [^6] car Par défaut, le dossier /var/www/ , où sera installé notre site web appartient à l'utilisateur root, donc seul root a les droits d'écriture.
 
 [^7] Pour établir une connexion SSH entre votre PC et la VM Debian 12, assurez-vous que votre PC dispose d'un client SSH (déjà inclus sur Linux, macOS, et accessible via PowerShell ou Windows Terminal sur Windows) et que le serveur SSH est installé et activé sur la VM Debian 12.
+
+[^8] Dans la barre d'adresse du navigateur (ici Google Chrome), entrez l'adresse IP de votre VM où le site 'LENOFO' est hébergé sur le port 80 via le serveur Apache2. Actuellement, l'adresse est en 'Non sécurisé', mais dans une étape ultérieure, nous pourrons sécuriser la connexion au site en utilisant HTTPS.
