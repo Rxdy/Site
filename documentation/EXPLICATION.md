@@ -333,17 +333,17 @@ Cette expérience nous a permis de développer des compétences avancées en scr
 
 ---
 
-## 6. Outils utilisés
+## Annexe Outils utilisés
 
-- Internet
-- Google Drive
-- Discord
+- Internet (forums de discusion, sites de référence...)
+- Discord (plateforme d'échanges essentielle, facilitant la communication en temps réel entre les membres de l'équipe )
 - Git
-- GitHub
+- GitHub (plateforme collaborative indispensable, nous permettant de centraliser et de gérer notre code source de manière structurée)
 - GitLens
 - Cours
-
-## 7. Script final
+- Google Drive (partage d'un dossier pour fichiers détudes et de travail)
+  
+## Annexe Script final
 
 ```bash
 #!/bin/bash
@@ -443,7 +443,7 @@ fi
 
 ---
 
-## Note
+## Notes référencées
 
 [^1] Cette commande télécharge un script d'installation depuis une URL, puis le passe directement à bash pour l'exécuter. C'est une méthode courante pour installer rapidement des logiciels, mais elle comporte des risques de sécurité, car elle exécute un script téléchargé en ligne sans vérification préalable.
 
