@@ -25,13 +25,3 @@
 <div align="center">
     <img src="./images/2024-11-02-18-00-09.png" alt="alt text" width="400"/>
 </div>
-
-
-
-
-
-
-
-
-
-

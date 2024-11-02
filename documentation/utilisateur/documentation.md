@@ -3,13 +3,16 @@
 #### *Remarques prélimilaires: Les clichés accompagnant les explications sont faits à partir de VirtualBox version 7.1.4. Les points importants des clichés seront encadrés en rouge.* 
 
 - VM = virutal machine / machine virtuelle
-- AdresseIP = Adresse IP du la machine virtuelle  
+- AdresseIP = Adresse IP du la machine virtuelle
+  
 ---
+
 ## Introduction
 
 Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis serveur virtuel`, `Préparation de l'environnement`,`Pré-requis serveur physique`, `Connection au serveur web`, `Héberger le site web`. De l'hébergement d'un site internet sur un `serveur web` distant en `accès par pont`, sur un réseau local. 
 
 ---
+
 ## Prérequis serveur virtuel
 
 Afin de poursuivre la manipulation vous aurez besoin de :
@@ -24,6 +27,7 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - 'le mot de passe du compte "root"'                mot_de_passe_root_serveur
 
 ---
+
 ## Préparation de l'environnement virtuel
 
 Il existe deux solutions pour héberger son site sur un `serveur distant`. Il peut être sur un serveur physique ou un serveur virtuel. Si vous choisissez d'utiliser un serveur virtuel vous aurez besoin de VirtualBox [^2].
@@ -53,6 +57,7 @@ ATTENTION a bien configuré le réseau de la machine virtuel. `Cliquer droit sur
 Changer le mode d'accès réseau par : `Accès par pont`[^1].
 
 ---
+
 ## Pré-requis serveur physique
 
 Afin de poursuivre la manipulation vous aurez besoin de :
@@ -61,6 +66,7 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - `Serveur physique`
 
 ---
+
 ## Connection au serveur web
 
 ### Adresse IP
@@ -105,6 +111,7 @@ Saisisser cette fois le mot de passe adminstrateur.
 Bravo, vous êtes connecté en tant qu'administrateur root depuis votre machine physique sur le serveur web distant, ce qui vous garantit un accès complet sans restrictions à toutes les commandes, tous les dossiers et tous les fichiers.
 
 ---
+
 ## Héberger le site web
 
 ### Installation du site sur le serveur
@@ -126,6 +133,7 @@ Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fi
 ![alt text](./images/2024-11-02-16-37-39.png)
 
 ## Vérifier la bonne installation et le bon fonctionnalité du site web "lenofo" sur notre serveur.
+
 Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".[^8]
 
 ![alt text](./images/2024-11-02-17-09-45.png)
@@ -136,12 +144,10 @@ Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de
 
 ![alt text](./images/2024-11-02-17-05-04.png)
 
-
-
 ---
 
-
 ## Notes
+
 [^1] En mode pont sur VirtualBox, la machine virtuelle partage la même connexion réseau que l'hôte, lui permettant d'obtenir une adresse IP propre sur le réseau local, comme un appareil physique.
 
 [^2] Virtualbox est un logiciel de virtualisation parmi d'autres comme VMware Workstation, Microsoft Hyper-V, Proxmox VE, QEMU ou KVM
