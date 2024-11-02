@@ -7,7 +7,7 @@ Nous nous sommes rapidement mis en place, ce qui nous a permis d’aborder notre
 
 ---
 ## 2. Méthodologie
-Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public [^1] pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
+Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
 
 ---
 ## 3. Déroulement du projet
@@ -192,12 +192,15 @@ Notre objectif était de rendre l’installation aussi simple et automatisée qu
 ## 7. Script final
 
 ```bash
+#!/bin/bash
+
 # Variable pour stocker la distribution du serveur.
 distrib=$(cat /etc/*release* | grep "^ID=");
 # Variable pour stocker l'adresse du serveur.
 ipadress=$(hostname -I | cut -d ' ' -f1);
 # Variable pour stocker le chemin d'apache où l'on stock les fichiers du site et éviter de le répeter et si besoin le changer ici pour tout le script.
 path="/var/www/html/lenofo"
+
 # Condition pour savoir si l'utilisateur connecté est de type root
 if [ "$USER" != "root" ]; then
   # L'utilisateur n'est pas de type root.
@@ -206,6 +209,7 @@ if [ "$USER" != "root" ]; then
   echo "Erreur ! Attention, vous devez être en root pour lancer le script." 
   echo "Error ! Please, you must be root to run the script."
   echo "---------------------------------------------------------------------"
+
 else
   # L'utilisateur est de type root.
   # Test de la distribution du serveur.
@@ -213,6 +217,8 @@ else
     # Le serveur est de type rocky.
     # Update du système.
     dnf update -y
+    # Installation de UNZIP.
+    dnf install -y unzip
     # Installation d'apache.
     dnf install -y httpd
     # Activation du service d'apache, au cas où.
@@ -221,10 +227,13 @@ else
     firewall-cmd --add-service=http --permanent
     # Rechargement du pare-feu.
     firewall-cmd --reload
+
   elif [ "$distrib" == 'ID=debian' ]; then
     # Le serveur est de type debian.
     # Update du système.
     apt update -y
+    # Installation de UNZIP.
+    apt install -y unzip
     # Installation d'apache.
     apt install -y apache2
     # Activation du service d'apache, au cas où.
@@ -276,13 +285,4 @@ else
 # Sors du script.
 exit
 fi
-
-## Notes
-[^1] Un dépôt GitHub public est accessible à tous, ce qui permet le téléchargement direct de fichiers avec des outils comme wget. Un dépôt privé, en revanche, nécessite une authentification pour accéder aux fichiers, ce qui peut compliquer l'utilisation d'outils en ligne de commande sans configuration supplémentaire.
-
-
-
-
-
-
 ```
