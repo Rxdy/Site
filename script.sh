@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Variable pour stocker la distribution du serveur.
 distrib=$(cat /etc/*release* | grep "^ID=");
 # Variable pour stocker l'adresse du serveur.
