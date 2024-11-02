@@ -308,3 +308,18 @@ footer {
 .footer-footer {
   text-align: center;
 }
+
+@media (max-width: 1600px) {
+  .img-product {
+    width: 300px;
+    height: 300px;
+  }
+
+  .avis-photo {
+    display: none;
+  }
+
+  .first-row-pc {
+    padding: 50px;
+  }
+}
