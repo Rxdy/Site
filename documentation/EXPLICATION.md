@@ -7,7 +7,7 @@ Nous nous sommes rapidement mis en place, ce qui nous a permis d’aborder notre
 
 ---
 ## 2. Méthodologie
-Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
+Nous avons travaillé principalement via des appels sur Discord, parfois en petits groupes de deux à quatre personnes. Le développement principal a été réalisé par un codeur, tandis que les autres membres se concentraient sur des recherches de solutions et des tests. C'est en partie pour cela que le nombre de COMMITS est inégal. Nous avons choisi de publier notre code sur un dépôt GitHub public [^1] pour assurer la compatibilité avec `wget`, ce qui aurait pu être problématique avec un dépôt privé.
 
 ---
 ## 3. Déroulement du projet
@@ -276,5 +276,13 @@ else
 # Sors du script.
 exit
 fi
+
+## Notes
+[^1] Un dépôt GitHub public est accessible à tous, ce qui permet le téléchargement direct de fichiers avec des outils comme wget. Un dépôt privé, en revanche, nécessite une authentification pour accéder aux fichiers, ce qui peut compliquer l'utilisation d'outils en ligne de commande sans configuration supplémentaire.
+
+
+
+
+
 
 ```
