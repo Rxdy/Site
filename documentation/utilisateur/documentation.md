@@ -1,6 +1,9 @@
 # Documentation utilisateurs
 
 #### *Remarques prélimilaires: Les clichés accompagnant les explications sont faits à partir de VirtualBox version 7.1.4. Les points importants des clichés seront encadrés en rouge.* 
+
+- VM = virutal machine / machine virtuelle
+- AdresseIP = Adresse IP du la machine virtuelle  
 ---
 ## Introduction
 
@@ -10,10 +13,12 @@ Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis serveu
 ## Prérequis serveur virtuel
 
 Afin de poursuivre la manipulation vous aurez besoin de :
-- `VirtualBox`
-- `Ordinateur physique` 
-- `Serveur virtuel` avec serveur ssh
-- `Réseau par pont`
+
+- 'Ordinateur physique', à partir duquel nous pourons nous connecter en ssh à la VM
+- 'réseau local'
+- `logiciel de virtualisation, ici VirtualBox`
+- `Serveur virtuel`, c'est à dire une machine virtuelle installé sur virtualbox avec serveur ssh [^7]
+- `Réseau par pont`, 
 - 'compte utilisateur sur serveur'                  nom_compte_utilisateur_serveur
 - 'le mot de passe utilisateur de votre serveur'    mot_de_passe_utilisateur_serveur
 - 'le mot de passe du compte "root"'                mot_de_passe_root_serveur
@@ -97,8 +102,7 @@ Saisisser cette fois le mot de passe adminstrateur.
 
 ![alt text](./images/2024-11-02-16-24-58.png)
 
-
- Bravo, vous êtes connecté en tant que administrateur sur la machine.
+Bravo, vous êtes connecté en tant qu'administrateur root depuis votre machine physique sur le serveur web distant, ce qui vous garantit un accès complet sans restrictions à toutes les commandes
 
 ---
 ## Héberger le site web
@@ -109,8 +113,25 @@ Pour l'installation du site sur le serveur vous aurez besoin de seulement une co
 
 Commande : `wget -qO- https://bit.ly/lenofo | bash` 
 
+![alt text](./images/2024-11-02-16-36-07.png)
+
+Valider... l'installation est lancée...
+
+![alt text](./images/2024-11-02-16-36-38.png)
+
+![alt text](./images/2024-11-02-16-36-58.png)
+
+Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fichier lenofo.zip) de tous les éléments du site dans le dossier du serveur, c'est à dire dans /var/www/html/
+
+![alt text](./images/2024-11-02-16-37-39.png)
+
+## Vérifier la bonne installation et le bon fonctionnalité du site web "lenofo" sur notre serveur.
+Pour tout navigateur (présent sur un pc,mac,vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO"
+
 ---
-# Notes
+
+
+## Notes
 [^1] En mode pont sur VirtualBox, la machine virtuelle partage la même connexion réseau que l'hôte, lui permettant d'obtenir une adresse IP propre sur le réseau local, comme un appareil physique.
 
 [^2] Virtualbox est un logiciel de virtualisation parmi d'autres comme VMware Workstation, Microsoft Hyper-V, Proxmox VE, QEMU ou KVM
@@ -122,3 +143,5 @@ Commande : `wget -qO- https://bit.ly/lenofo | bash`
 [^5] `su -` charge l'environnement complet de l'utilisateur cible (comme si on ouvrait une nouvelle session), tandis que `su` garde l'environnement actuel, ce qui peut causer des problèmes de chemin ou de permissions.
 
 [^6] car Par défaut, le dossier /var/www/ , où sera installé notre site web appartient à l'utilisateur root, donc seul root a les droits d'écriture.
+
+[^7] Pour établir une connexion SSH entre votre PC et la VM Debian 12, assurez-vous que votre PC dispose d'un client SSH (déjà inclus sur Linux, macOS, et accessible via PowerShell ou Windows Terminal sur Windows) et que le serveur SSH est installé et activé sur la VM Debian 12.
