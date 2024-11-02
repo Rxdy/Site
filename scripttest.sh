@@ -19,8 +19,6 @@ else
     # Le serveur est de type rocky.
     # Update du système.
     dnf update -y
-    # Installation de UNZIP.
-    dnf install -y unzip
     # Installation d'apache.
     dnf install -y httpd
     # Activation du service d'apache, au cas où.
@@ -33,8 +31,6 @@ else
     # Le serveur est de type debian.
     # Update du système.
     apt update -y
-    # Installation de UNZIP.
-    apt install -y unzip
     # Installation d'apache.
     apt install -y apache2
     # Activation du service d'apache, au cas où.
