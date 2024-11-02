@@ -1,9 +1,12 @@
+#!/bin/bash
+
 # Variable pour stocker la distribution du serveur.
 distrib=$(cat /etc/*release* | grep "^ID=");
 # Variable pour stocker l'adresse du serveur.
 ipadress=$(hostname -I | cut -d ' ' -f1);
 # Variable pour stocker le chemin d'apache où l'on stock les fichiers du site et éviter de le répeter et si besoin le changer ici pour tout le script.
 path="/var/www/html/lenofo"
+
 # Condition pour savoir si l'utilisateur connecté est de type root
 if [ "$USER" != "root" ]; then
   # L'utilisateur n'est pas de type root.
@@ -12,6 +15,7 @@ if [ "$USER" != "root" ]; then
   echo "Erreur ! Attention, vous devez être en root pour lancer le script." 
   echo "Error ! Please, you must be root to run the script."
   echo "---------------------------------------------------------------------"
+
 else
   # L'utilisateur est de type root.
   # Test de la distribution du serveur.
@@ -19,6 +23,8 @@ else
     # Le serveur est de type rocky.
     # Update du système.
     dnf update -y
+    # Installation de UNZIP.
+    dnf install -y unzip
     # Installation d'apache.
     dnf install -y httpd
     # Activation du service d'apache, au cas où.
@@ -27,10 +33,13 @@ else
     firewall-cmd --add-service=http --permanent
     # Rechargement du pare-feu.
     firewall-cmd --reload
+
   elif [ "$distrib" == 'ID=debian' ]; then
     # Le serveur est de type debian.
     # Update du système.
     apt update -y
+    # Installation de UNZIP.
+    apt install -y unzip
     # Installation d'apache.
     apt install -y apache2
     # Activation du service d'apache, au cas où.
