@@ -1,3 +1,5 @@
+/* Style pour les éléments globales et la page d'accueil */
+
 * {
   font-family: sans-serif;
 }
@@ -6,6 +8,7 @@ body {
   margin: 0;
 }
 
+/* Style pour le header */
 #header {
   background-color: white;
   width: 100%;
@@ -52,6 +55,7 @@ body {
   margin-top: 2%;
 }
 
+/* Style commun à toutes les pages */
 .content {
   background-color: white;
   width: 90%;
@@ -61,6 +65,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Style pour la page d'accueil */
 #accueil {
   padding: 50px 0 10px 30px;
   margin-top: 20px;
@@ -96,45 +101,6 @@ body {
   margin-bottom: 50px;
 }
 
-#contact {
-  display: none;
-  margin-top: 20px;
-}
-.nom-produits {
-  margin-left: 20px;
-  font-size: 24px;
-}
-.first-row-pc {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.title-page {
-  font-size: 36px;
-  margin-left: 20px;
-  padding-top: 20px;
-}
-
-.img-produits {
-  width: 350px;
-  height: 350px;
-}
-.vente {
-  font-weight: bold;
-  color: red;
-  margin-bottom: -2px;
-}
-.nom-card {
-  font-size: 20px;
-  margin-bottom: 3px;
-}
-.card-pc {
-  margin-bottom: 20px;
-}
-.price-card {
-  font-weight: bold;
-  font-size: 18px;
-}
 .supertitle {
   font-size: 20px;
   margin-left: 20px;
@@ -160,7 +126,7 @@ body {
   height: 200px;
   transform: translateY(-50%);
 }
-
+/* Style pour la partie `Que faisons-nous ?` */
 .metier {
   display: flex;
   justify-content: space-evenly;
@@ -206,6 +172,7 @@ body {
   color: #fff;
 }
 
+/* Style pour la présentation des produits */
 .product {
   display: flex;
   justify-content: center;
@@ -241,6 +208,8 @@ body {
 .nom-product {
   font-weight: bold;
 }
+
+/* Style pour la partie `Avis et témoignage` */
 .rating {
   margin-left: 20px;
   margin-bottom: 5px;
@@ -273,6 +242,8 @@ body {
 .avis-date {
   color: black;
 }
+
+/* Style pour le footer */
 footer {
   display: flex;
   justify-content: space-around;
@@ -290,6 +261,7 @@ footer {
 .footer-title {
   font-weight: bold;
   color: black;
+  font-size: 16px;
 }
 
 .first-column p:not(.footer-title):hover,
@@ -309,6 +281,7 @@ footer {
   text-align: center;
 }
 
+/* Mediaqueries pour gérer le responsive */
 @media (max-width: 1600px) {
   .img-product {
     width: 300px;
