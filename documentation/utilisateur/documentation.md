@@ -15,7 +15,6 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - `Ordinateur physique`
 - `Serveur virtuel`
 - `Réseau par pont`
-- 'adresse IP du serveur'                           adresse_ip_serveur
 - 'compte utilisateur sur serveur'                  nom_compte_utilisateur
 - 'le mot de passe utilisateur de votre serveur'    mot_de_passe_utilisateur
 - 'le mot de passe du compte "root"'                mot_de_passe_root
