@@ -1,5 +1,6 @@
 # Documentation utilisateurs
 
+#### *Remarques prélimilaires: Les clichés accompagnant les explications sont faits à partir de VirtualBox version 7.1.4. Les points importants des clichés seront encadrés en rouge.* 
 ---
 ## Introduction
 
@@ -14,14 +15,15 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - `Ordinateur physique`
 - `Serveur virtuel`
 - `Réseau par pont`
-- 'adresse IP du serveur'               adresse_ip_serveur
-- 'compte utilisateur sur serveur'      nom_compte_utilisateur
-- 'le mot de passe du compte "root"'    mot_de_passe_root
+- 'adresse IP du serveur'                           adresse_ip_serveur
+- 'compte utilisateur sur serveur'                  nom_compte_utilisateur
+- 'le mot de passe utilisateur de votre serveur'    mot_de_passe_utilisateur
+- 'le mot de passe du compte "root"'                mot_de_passe_root
 
 ---
 ## Préparation de l'environnement virtuel
 
-Il existe deux solutions pour héberger son site sur un `serveur distant`. Il peut être sur un serveur physique ou un serveur virtuel. Si vous choisissez d'utiliser un serveur virtuel vous aurez besoin de VirtualBox.
+Il existe deux solutions pour héberger son site sur un `serveur distant`. Il peut être sur un serveur physique ou un serveur virtuel. Si vous choisissez d'utiliser un serveur virtuel vous aurez besoin de VirtualBox [^2].
 
 ### Installation de VirtualBox
 
@@ -43,20 +45,9 @@ Pour debian, voici un lien pour un tutoriel sur youtube : https://www.youtube.co
 
 ATTENTION a bien configuré le réseau de la machine virtuel. `Cliquer droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
 
-
-
-
-
-
+![alt text](./images/2024-11-02-15-08-05.png)
 
 Changer le mode d'accès réseau par : `Accès par pont`[^1].
-
-
-
-
-
-
-
 
 ---
 ## Pré-requis serveur physique
@@ -73,6 +64,8 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 
 Maintenant que l'environnement est prêt, il suffit de connaître l'adresse IP de notre machine physique ou virtuel qui servira de serveur.
 Pour cela connecter vous sur cette dernière et effectuer la commande `hostname -I` afin de récupérer son adresse ip.
+
+![alt text](./images/2024-11-02-15-27-12.png)
 
 ### Connection SSH
 
@@ -98,5 +91,7 @@ Commande : `wget -qO- https://bit.ly/lenofo | bash`
 
 ---
 # Notes
-[^1]
+[^1] En mode pont sur VirtualBox, la machine virtuelle partage la même connexion réseau que l'hôte, lui permettant d'obtenir une adresse IP propre sur le réseau local, comme un appareil physique.
+
+[^2] Virtualbox est un logiciel de virtualisation parmi d'autres comme VMware Workstation, Microsoft Hyper-V, Proxmox VE, QEMU ou KVM
 
