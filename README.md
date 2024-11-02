@@ -6,7 +6,7 @@
 
 ### Commandes d'installation
 
-**Commande complète du script :**
+*/Commande complète du script :*/
 `wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/script.sh | bash`
 
 **Commande raccourcie du script :**

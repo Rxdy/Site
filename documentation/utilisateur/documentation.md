@@ -14,6 +14,9 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - `Ordinateur physique`
 - `Serveur virtuel`
 - `Réseau par pont`
+- 'adresse IP du serveur'               adresse_ip_serveur
+- 'compte utilisateur sur serveur'      nom_compte_utilisateur
+- 'le mot de passe du compte "root"'    mot_de_passe_root
 
 ---
 ## Préparation de l'environnement virtuel
@@ -38,9 +41,22 @@ Pour debian, voici un lien pour un tutoriel sur youtube : https://www.youtube.co
 
 ### Paramétrage réseau en accès par pont
 
-Attention a bien configurer le réseau de la machine virtuel. `Clique droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
+ATTENTION a bien configuré le réseau de la machine virtuel. `Cliquer droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
 
-Changer le mode d'accès réseau par : `Accès par pont`.
+
+
+
+
+
+
+Changer le mode d'accès réseau par : `Accès par pont`[^1].
+
+
+
+
+
+
+
 
 ---
 ## Pré-requis serveur physique
@@ -60,7 +76,7 @@ Pour cela connecter vous sur cette dernière et effectuer la commande `hostname 
 
 ### Connection SSH
 
-Nous allons maintenant nous connecter en SSH à notre serveur distant depuis notre machine physique. Ouvrer votre invite de commande, et taper la commande suivant : `ssh -p 22 NomDeLaMachine@AdresseIP`. Saisissez vos identifiants, nom d'utilisateur et mot de passe.
+Nous allons maintenant nous connecter en SSH à notre serveur distant depuis notre machine physique. Ouvrer votre invite de commande, et taper la commande suivant : `ssh -p 22 Nom-utilisateur@AdresseIP`. Saisissez vos identifiants, nom d'utilisateur et mot de passe.
 (Attention, votre machine sur laquel vous voulez vous connecter doit être allumé)
 
 Bravo, vous avez maintenant accès à votre serveur depuis votre machine.
@@ -81,5 +97,6 @@ Pour l'installation du site sur le serveur vous aurez besoin de seulement une co
 Commande : `wget -qO- https://bit.ly/lenofo | bash` 
 
 ---
-
+# Notes
+[^1]
 
