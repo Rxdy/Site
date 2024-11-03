@@ -1,25 +1,2 @@
-# Ignorer les fichiers temporaires
-*.tmp
-*.swp
+.DS_Store
 
-# Ignorer les fichiers de logs
-*.log
-
-#Ignorer les fichiers EXE
-*.exe
-
-# Ignorer les dossiers spécifiques
-node_modules/
-dist/
-__pycache__/
-
-# Ignorer les fichiers de configuration environnementale
-.env
-
-#Ignorer les fichiers particulilers - Etudes personnelles
-documentation/olivier_EXPLICATION_CODE_SCRIPT_PAR_CHATGPT.md
-documentation/olivier_AUTRES_SOLUTIONS_CGPT.md
-
-
-#Ignorer les dossiers particulilers - Etudes personnelles
-doc_olivier
